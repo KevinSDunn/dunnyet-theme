@@ -1,0 +1,22 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Website meta description for google search results go here" />
+    <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#1A94D2" />
+    <meta name="author" content="" />
+
+    <title>{{ .Title }}</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+
+    <!-- Process bootstrap and additional styles -->
+    {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+    {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
+
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+</head>

@@ -1,0 +1,58 @@
+{{ define "main" }}
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Starting Location</h5>
+                        <p class="card-text">
+                            {{ .Params.startlocation }}<br />
+                            Starting Milage: {{ .Params.startodometer }}
+                        </p>
+                        <a href="#" class="btn btn-primary">View Start Point</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ending Location</h5>
+                        <p class="card-text">
+                            {{ .Params.endlocation }}<br />
+                            Starting Milage: {{ .Params.endodometer }}
+                        </p>
+                        <a href="#" class="btn btn-primary">View End Point</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+
+
+                <div class="card" style="width: 18rem;">
+                    {{ with .Resources.GetMatch "map.jpg" }}
+                    <img src="{{ .RelPermalink }}" class="card-img-top" alt="...">
+                    {{ end }}
+
+                    <div class="card-body">
+                        <h5 class="card-title">Route</h5>
+                        <p class="card-text">
+                            Total Miles </p>
+                        <a href="#" class="btn btn-primary">Show Full Route</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container pb-5">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}

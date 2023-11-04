@@ -1,0 +1,21 @@
+# DunnYet - a Hugo theme for an RV Adventure site
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "DunnYet"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = "Theme developed for the Dunns.Org site DunnYet"
+homepage = "http://dunns.org/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Kevin Dunn"
+  homepage = "https://dunns.org/theme"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
